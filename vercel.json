@@ -1,6 +1,9 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    { "source": "/caresheets", "destination": "/care-sheets", "permanent": true }
+  ],
   "headers": [
     {
       "source": "/assets/(.*)",
