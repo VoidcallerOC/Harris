@@ -10,7 +10,7 @@ const HOURS = [
   { day: "Tuesday",   label: "10:00 AM – 7:30 PM", open: 10, close: 19.5 },
   { day: "Wednesday", label: "10:00 AM – 7:30 PM", open: 10, close: 19.5 },
   { day: "Thursday",  label: "10:00 AM – 7:30 PM", open: 10, close: 19.5 },
-  { day: "Friday",    label: "4:30 PM – 7:30 PM", open: 16.5, close: 19.5 },
+  { day: "Friday",    label: "10:00 AM – 7:00 PM", open: 10, close: 19 },
   { day: "Saturday",  label: "10:00 AM – 6:00 PM", open: 10, close: 18 },
 ];
 
