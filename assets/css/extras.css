@@ -1,0 +1,16 @@
+
+.chooser-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.chooser-grid .card h3 { font-size: 1.3rem; }
+.live-banner {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px;
+  margin-top: 1.4rem; padding: 16px 18px;
+  border: 1px solid var(--brass);
+  background: color-mix(in srgb, var(--ember) 14%, var(--surface));
+}
+.live-banner p { color: var(--ticket); margin: 0; max-width: 46ch; }
+.story-shot { min-height: 240px; margin: 1.1rem 0 0; border: 1px solid var(--line); }
+.story-shot img { width: 100%; height: 280px; object-fit: cover; object-position: center 30%; }
+.story-shot figcaption { left: 12px; bottom: 10px; transform: none; }
+@media (max-width: 860px) {
+  .chooser-grid { grid-template-columns: 1fr; }
+}
