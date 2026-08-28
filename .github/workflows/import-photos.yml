@@ -14,7 +14,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: feat/herp-shop
-      - name: Download slot photos from the old shop site
+      - name: Download slot photos
         run: |
           mkdir -p assets/img
           curl -fsSL -k -o assets/img/hero.jpg http://www.harrisinwonderland.com/images/giant-day.JPG
@@ -22,9 +22,12 @@ jobs:
           curl -fsSL -k -o assets/img/case-lizards.jpg http://www.harrisinwonderland.com/images/panther2.jpg
           curl -fsSL -k -o assets/img/case-amphibians.jpg http://www.harrisinwonderland.com/images/red-eye.JPG
           curl -fsSL -k -o assets/img/bdaysnake55.jpg http://www.harrisinwonderland.com/images/bdaysnake55.jpg
-          python3 -c "from pathlib import Path\n[print(p, p.stat().st_size, p.read_bytes()[:3]) for p in Path('assets/img').glob('*.jpg')]"
-      - uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: Add real herp photos from the old shop site
-          file_pattern: assets/img/*.jpg
-          branch: feat/herp-shop
+          ls -la assets/img
+      - name: Commit photos
+        run: |
+          git config user.name "VoidcallerOC"
+          git config user.email "voidcalleroc@gmail.com"
+          git add assets/img/hero.jpg assets/img/case-snakes.jpg assets/img/case-lizards.jpg assets/img/case-amphibians.jpg assets/img/bdaysnake55.jpg
+          git diff --cached --quiet && exit 0
+          git commit -m "Add real herp photos from the old shop site"
+          git push
