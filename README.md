@@ -1,8 +1,8 @@
 # Harris in Wonderland
 
-Static rebuild of the Canton, CT reptile and exotic-pet shop site.
+Static rebuild of the Canton, CT **reptile specialty shop**.
 
-Source material scraped from the 2000s `harrisinwonderland.com` pages (about, reptiles, available-animals lists) plus current public listings (address, phone, hours, reviews).
+Source material scraped from the 2000s `harrisinwonderland.com` pages (about, reptiles, available-animals lists) plus current public listings (address, phones, hours, reviews).
 
 - Repo: https://github.com/VoidcallerOC/Harris
 - Pattern: FORGE client-site-starter (zero-build HTML/CSS/JS)
@@ -10,17 +10,25 @@ Source material scraped from the 2000s `harrisinwonderland.com` pages (about, re
 
 ## Pages
 
-- `/` story, collection, hours tease
-- `/reptiles` herps + how to buy
-- `/fish` freshwater, marine, ponds, gliders
-- `/visit` hours, map, parties, contact form
+- `/` herp-first homepage: live collection, specimen cases, keepers
+- `/reptiles` snakes, lizards, amphibians, feeders, care sheets, how to buy
+- `/visit` hours, snake-handle door, birthday programs, contact
+- `/fish` quieter secondary page (freshwater, marine, ponds, gliders)
+
+## Facts on the site
+
+- 364 Albany Turnpike, Canton, CT
+- (860) 674-0160 and (860) 888-5130
+- Adam@harrisinwonderland.com and Seth@harrisinwonderland.com
+- Seth Harris (founder, fish, taught biology), Adam Harris (reptiles, breeding, field time), Ashlee Carlson (husbandry)
+- Captive-bred stock, care sheets, birthday programs, snake-handle door
+- No birds. No 2015 price list.
 
 ## Before launch
 
 1. Confirm Friday hours (public listings disagree: some say 10–7, Yelp March 2026 says 4:30–7:30).
-2. Confirm a public email. Form currently opens a mailto to `harrisinwonderland@gmail.com` — replace in `assets/js/main.js` if wrong.
-3. Drop real store photos into `assets/img/` and wire them into the hero panel / tiles.
-4. Point Vercel to this repo (static, no framework).
+2. Asset Lead: drop real shop photos at the marked slots (`/assets/img/hero.jpg`, `case-snakes.jpg`, `case-lizards.jpg`, `case-amphibians.jpg`). Do not generate fake animal or shop photography.
+3. Point Vercel to this repo (static, no framework).
 
 ## Local
 

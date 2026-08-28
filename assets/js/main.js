@@ -1,7 +1,7 @@
 const BUSINESS = {
   name: "Harris in Wonderland",
   phone: "(860) 674-0160",
-  email: "harrisinwonderland@gmail.com",
+  email: "Adam@harrisinwonderland.com",
 };
 
 const HOURS = [
@@ -58,3 +58,12 @@ if (form) {
     if (status) status.textContent = "Opening your email…";
   });
 }
+
+document.querySelectorAll(".photo-slot img").forEach((img) => {
+  const markEmpty = () => {
+    img.hidden = true;
+    img.closest(".photo-slot")?.classList.add("is-empty");
+  };
+  img.addEventListener("error", markEmpty);
+  if (img.complete && img.naturalWidth === 0) markEmpty();
+});
