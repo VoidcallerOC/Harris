@@ -1,0 +1,30 @@
+name: import-photos
+on:
+  workflow_dispatch:
+  push:
+    branches: [feat/herp-shop]
+    paths:
+      - ".github/workflows/import-photos.yml"
+permissions:
+  contents: write
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feat/herp-shop
+      - name: Download slot photos from the old shop site
+        run: |
+          mkdir -p assets/img
+          curl -fsSL -k -o assets/img/hero.jpg http://www.harrisinwonderland.com/images/giant-day.JPG
+          curl -fsSL -k -o assets/img/case-snakes.jpg http://www.harrisinwonderland.com/images/Ball1.jpg
+          curl -fsSL -k -o assets/img/case-lizards.jpg http://www.harrisinwonderland.com/images/panther2.jpg
+          curl -fsSL -k -o assets/img/case-amphibians.jpg http://www.harrisinwonderland.com/images/red-eye.JPG
+          curl -fsSL -k -o assets/img/bdaysnake55.jpg http://www.harrisinwonderland.com/images/bdaysnake55.jpg
+          python3 -c "from pathlib import Path\n[print(p, p.stat().st_size, p.read_bytes()[:3]) for p in Path('assets/img').glob('*.jpg')]"
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Add real herp photos from the old shop site
+          file_pattern: assets/img/*.jpg
+          branch: feat/herp-shop
