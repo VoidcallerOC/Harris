@@ -3,22 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Visit &amp; Contact — Harris in Wonderland, Canton CT</title>
-  <meta name="description" content="Hours, directions, birthday programs, and contact for Harris in Wonderland at 364 Albany Turnpike, Canton, CT. (860) 674-0160." />
-  <meta name="theme-color" content="#07110d" />
+  <title>Visit — Harris in Wonderland, Canton CT</title>
+  <meta name="description" content="Hours, directions, birthday programs, and contact. 364 Albany Turnpike, Canton." />
+  <meta name="theme-color" content="#f3ead6" />
   <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg" />
   <link rel="canonical" href="https://harrisinwonderland.com/visit" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600;1,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/assets/css/styles.css" />
 </head>
 <body>
   <header class="top">
-    <a class="brand" href="/">
-      <img src="/assets/img/mark.svg" alt="" width="36" height="36" />
-      Harris in Wonderland
-    </a>
+    <a class="brand" href="/">Harris in Wonderland <b>Canton</b></a>
     <nav class="nav" id="nav">
       <a href="/">Home</a>
       <a href="/reptiles">Reptiles</a>
@@ -30,74 +27,61 @@
     <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-label="Menu">Menu</button>
   </header>
   <main>
-    <section class="page-hero">
-      <div class="wrap">
-        <p class="kicker">364 Albany Turnpike · Route 44</p>
-        <h1>Come in. Bring questions.</h1>
-        <p class="lede">Dedicated parking, accessible entry, road frontage. The collection does not live on the website — it lives in the room.</p>
+    <section class="page-hero"><div class="wrap">
+      <p class="kicker">364 Albany Turnpike · Route 44</p>
+      <h1>Come in. Bring questions.</h1>
+      <p class="lede">Dedicated parking, accessible entry. The collection lives in the room, not on this site.</p>
+    </div></section>
+    <section><div class="wrap grid-2">
+      <div class="ticket">
+        <small>Hours</small>
+        <h2>When the door is open</h2>
+        <ul class="hours" id="hoursList"></ul>
+        <p class="note" style="margin-top:16px">Friday is shorter. Monday is closed. Confirm around holidays.</p>
       </div>
-    </section>
-    <section>
-      <div class="wrap grid-2">
-        <div class="card">
-          <p class="kicker">Hours</p>
-          <h2>Open most days</h2>
-          <ul class="hours" id="hoursList"></ul>
-          <p class="note" style="margin-top:16px">Friday hours are shorter. Monday is closed. Confirm around holidays and if you are coming for a party or a specific animal.</p>
-        </div>
-        <div class="card">
-          <p class="kicker">Address</p>
-          <h2>Canton, Connecticut</h2>
-          <p>364 Albany Turnpike<br />Canton, CT 06019</p>
-          <p><a href="tel:+18606740160">(860) 674-0160</a></p>
-          <p><a href="https://maps.google.com/?q=364+Albany+Turnpike+Canton+CT+06019" target="_blank" rel="noopener">Google Maps</a></p>
-          <p style="margin-top:12px;color:var(--muted)">Between Daynard Drive and East Hill Road on Route 44.</p>
-        </div>
+      <div class="card">
+        <p class="kicker">Address</p>
+        <h2>Canton, Connecticut</h2>
+        <p>364 Albany Turnpike<br />Canton, CT 06019</p>
+        <p><a href="tel:+18606740160">(860) 674-0160</a></p>
+        <p><a href="https://maps.google.com/?q=364+Albany+Turnpike+Canton+CT+06019" target="_blank" rel="noopener">Google Maps</a></p>
       </div>
-    </section>
-    <section>
-      <div class="wrap grid-2">
-        <div>
-          <div class="section-head">
-            <p class="kicker">Programs</p>
-            <h2>Birthdays &amp; education</h2>
-          </div>
-          <p>The shop runs educational programs and birthday events that people plan trips around. The animals are the event.</p>
-          <p>Call to book. Mention ages, group size, and whether anyone in the group is new to reptiles.</p>
-        </div>
-        <form class="card" id="contactForm">
-          <p class="kicker">Write first</p>
-          <h2>Send a note</h2>
-          <div><label for="name">Name</label><input id="name" name="name" required autocomplete="name" /></div>
-          <div><label for="email">Email</label><input id="email" name="email" type="email" required autocomplete="email" /></div>
-          <div><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel" /></div>
-          <div>
-            <label for="topic">Topic</label>
-            <select id="topic" name="topic">
-              <option>General question</option>
-              <option>Looking for an animal</option>
-              <option>Birthday / program</option>
-              <option>Pond work</option>
-              <option>Supplies / feeders</option>
-            </select>
-          </div>
-          <div><label for="message">Message</label><textarea id="message" name="message" rows="5" required></textarea></div>
-          <button type="submit">Open email draft</button>
-          <p class="form-status" id="formStatus" role="status"></p>
-          <p class="note">Fastest answer is still the phone. Confirm the shop email before launch.</p>
-        </form>
+    </div></section>
+    <section><div class="wrap grid-2">
+      <div class="copy">
+        <p class="kicker">Programs</p>
+        <h2>Birthdays &amp; education</h2>
+        <p>The animals are the event. Call to book. Mention ages, group size, and whether anyone is new to reptiles.</p>
       </div>
-    </section>
+      <form class="card" id="contactForm">
+        <p class="kicker">Write first</p>
+        <h2>Send a note</h2>
+        <div><label for="name">Name</label><input id="name" name="name" required autocomplete="name" /></div>
+        <div><label for="email">Email</label><input id="email" name="email" type="email" required autocomplete="email" /></div>
+        <div><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel" /></div>
+        <div><label for="topic">Topic</label>
+          <select id="topic" name="topic">
+            <option>General question</option>
+            <option>Looking for an animal</option>
+            <option>Birthday / program</option>
+            <option>Pond work</option>
+            <option>Supplies / feeders</option>
+          </select>
+        </div>
+        <div><label for="message">Message</label><textarea id="message" name="message" rows="5" required></textarea></div>
+        <button type="submit">Open email draft</button>
+        <p class="form-status" id="formStatus" role="status"></p>
+      </form>
+    </div></section>
   </main>
   <footer>
-    <div class="wrap foot-row">
+    <div class="foot-row">
       <div>© <span id="year">2026</span> Harris in Wonderland · Canton, CT</div>
       <div class="foot-nav">
         <a href="/">Home</a>
         <a href="/reptiles">Reptiles</a>
         <a href="/fish">Fish</a>
-        <a href="https://www.facebook.com/p/Harris-in-Wonderland-Pets-100063473713270/" target="_blank" rel="noopener">Facebook</a>
-        <a href="https://instagram.com/harris_in_wonderland_pets" target="_blank" rel="noopener">Instagram</a>
+        <a href="/visit">Visit</a>
       </div>
     </div>
   </footer>
