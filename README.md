@@ -1,26 +1,33 @@
 # Harris in Wonderland
 
-Static rebuild of the Canton, CT reptile and exotic-pet shop site.
+Static rebuild of the Canton, CT **reptile specialty shop**.
 
-Source material scraped from the 2000s `harrisinwonderland.com` pages (about, reptiles, available-animals lists) plus current public listings (address, phone, hours, reviews).
+- Live: https://harrisinwonderland.com
+- Preview: https://harris-sand.vercel.app
+- Stock: https://my-hiwsite-6573.square.site
 
-- Repo: https://github.com/VoidcallerOC/Harris
-- Pattern: FORGE client-site-starter (zero-build HTML/CSS/JS)
-- Old domain: harrisinwonderland.com
+## Launch facts
+
+- 364 Albany Turnpike, Canton CT 06019
+- Shop (860) 674-0160 · booking (860) 888-5130
+- Adam@harrisinwonderland.com · Seth@harrisinwonderland.com
+- Hours: Mon closed · Tue–Fri 10–7 · Sat 10–6 · Sun 12–4
+- Friday is 10–7 (live shop + directories), not 4:30–7:30
+- Facebook https://www.facebook.com/profile.php?id=100063473713270
+- Instagram https://www.instagram.com/harris_in_wonderland_pets/
+- No birds. No 2015 price list. No Gmail. No Ashlee headshot.
 
 ## Pages
 
-- `/` story, collection, hours tease
-- `/reptiles` herps + how to buy
-- `/fish` freshwater, marine, ponds, gliders
-- `/visit` hours, map, parties, contact form
+- `/` herp-first homepage, live-stock CTA, their animal photos
+- `/reptiles` beginner chooser + collection
+- `/care/*` corn, king, leopard gecko, bearded dragon, red-foot, White’s
+- `/visit` hours, both phones, both emails, birthday booking
+- `/fish` quieter footer-only room (no birds)
 
-## Before launch
+## Photos in `assets/img/`
 
-1. Confirm Friday hours (public listings disagree: some say 10–7, Yelp March 2026 says 4:30–7:30).
-2. Confirm a public email. Form currently opens a mailto to `harrisinwonderland@gmail.com` — replace in `assets/js/main.js` if wrong.
-3. Drop real store photos into `assets/img/` and wire them into the hero panel / tiles.
-4. Point Vercel to this repo (static, no framework).
+Pulled from harrisinwonderland.com/images/ (directory listing 403s; files still serve). Not hotlinked.
 
 ## Local
 

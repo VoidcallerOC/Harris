@@ -1,21 +1,22 @@
 const BUSINESS = {
   name: "Harris in Wonderland",
   phone: "(860) 674-0160",
-  email: "harrisinwonderland@gmail.com",
+  booking: "(860) 888-5130",
+  email: "Adam@harrisinwonderland.com",
 };
 
 const HOURS = [
   { day: "Sunday",    label: "12:00 PM – 4:00 PM", open: 12, close: 16 },
   { day: "Monday",    label: "Closed", closed: true },
-  { day: "Tuesday",   label: "10:00 AM – 7:30 PM", open: 10, close: 19.5 },
-  { day: "Wednesday", label: "10:00 AM – 7:30 PM", open: 10, close: 19.5 },
-  { day: "Thursday",  label: "10:00 AM – 7:30 PM", open: 10, close: 19.5 },
-  { day: "Friday",    label: "4:30 PM – 7:30 PM", open: 16.5, close: 19.5 },
+  { day: "Tuesday",   label: "10:00 AM – 7:00 PM", open: 10, close: 19 },
+  { day: "Wednesday", label: "10:00 AM – 7:00 PM", open: 10, close: 19 },
+  { day: "Thursday",  label: "10:00 AM – 7:00 PM", open: 10, close: 19 },
+  { day: "Friday",    label: "10:00 AM – 7:00 PM", open: 10, close: 19 },
   { day: "Saturday",  label: "10:00 AM – 6:00 PM", open: 10, close: 18 },
 ];
 
 const yearEl = document.getElementById("year");
-if (yearEl) yearEl.textContent = new Date().getFullYear();
+ if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 const now = new Date();
 const today = now.getDay();
@@ -54,7 +55,7 @@ if (form) {
     const body = encodeURIComponent(
       `Name: ${data.name}\nEmail: ${data.email}\nPhone: ${data.phone || ""}\nTopic: ${data.topic || "General"}\n\n${data.message}`
     );
-    window.location.href = `mailto:${BUSINESS.email}?subject=${encodeURIComponent("Harris in Wonderland inquiry")}&body=${body}`;
+    window.location.href = `mailto:${BUSINESS.email}?cc=${encodeURIComponent("Seth@harrisinwonderland.com")}&subject=${encodeURIComponent("Harris in Wonderland inquiry")}&body=${body}`;
     if (status) status.textContent = "Opening your email…";
   });
 }
