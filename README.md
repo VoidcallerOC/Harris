@@ -12,6 +12,7 @@ Source material scraped from the 2000s `harrisinwonderland.com` pages (about, re
 
 - `/` herp-first homepage: live collection, specimen cases, keepers
 - `/reptiles` snakes, lizards, amphibians, feeders, care sheets, how to buy
+- `/gallery` shop photography from the live collection
 - `/visit` hours, snake-handle door, birthday programs, contact
 - `/fish` quieter secondary page (freshwater, marine, ponds, gliders)
 
@@ -27,7 +28,7 @@ Source material scraped from the 2000s `harrisinwonderland.com` pages (about, re
 ## Before launch
 
 1. Confirm Friday hours (public listings disagree: some say 10–7, Yelp March 2026 says 4:30–7:30).
-2. Asset Lead: drop real shop photos at the marked slots (`/assets/img/hero.jpg`, `case-snakes.jpg`, `case-lizards.jpg`, `case-amphibians.jpg`). Do not generate fake animal or shop photography.
+2. Shop photography lives in `/assets/img/gallery/` (22 frames from the collection). Hero, case, visit, and fish pages pull from that set.
 3. Point Vercel to this repo (static, no framework).
 
 ## Local

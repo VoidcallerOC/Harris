@@ -67,3 +67,35 @@ document.querySelectorAll(".photo-slot img").forEach((img) => {
   img.addEventListener("error", markEmpty);
   if (img.complete && img.naturalWidth === 0) markEmpty();
 });
+
+(function lightbox() {
+  const figures = document.querySelectorAll(".gallery-wall figure, .field-photo");
+  if (!figures.length) return;
+  const dialog = document.createElement("dialog");
+  dialog.className = "lightbox";
+  dialog.innerHTML = `<button class="lightbox-close" type="button" aria-label="Close">Close</button><img alt="">`;
+  document.body.appendChild(dialog);
+  const big = dialog.querySelector("img");
+  const close = dialog.querySelector(".lightbox-close");
+  const open = (fig) => {
+    const img = fig.querySelector("img");
+    if (!img) return;
+    big.src = img.currentSrc || img.src;
+    big.alt = img.alt || "";
+    dialog.showModal();
+  };
+  figures.forEach((fig) => {
+    fig.setAttribute("tabindex", "0");
+    fig.addEventListener("click", () => open(fig));
+    fig.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        open(fig);
+      }
+    });
+  });
+  close.addEventListener("click", () => dialog.close());
+  dialog.addEventListener("click", (e) => {
+    if (e.target === dialog) dialog.close();
+  });
+})();
